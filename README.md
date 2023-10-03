@@ -25,11 +25,11 @@ BharatWeb Navigator is a next-generation web browser tailored for the modern int
 
 ## Installation
 
-> Instructions on how to install the browser will go here.
+> Coming Soon
 
 ## Usage
 
-> Instructions on how to use the browser, navigate its features, and customize settings will go here.
+> Coming Soon
 
 ## Contributing
 
