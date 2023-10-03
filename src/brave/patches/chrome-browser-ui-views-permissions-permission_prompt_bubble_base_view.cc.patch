@@ -1,0 +1,12 @@
+diff --git a/chrome/browser/ui/views/permissions/permission_prompt_bubble_base_view.cc b/chrome/browser/ui/views/permissions/permission_prompt_bubble_base_view.cc
+index c2b922df0590d17fd84e2b6c95208fd566da1aef..f8423480cfcaf7cf298be42abf38aa3c851c24c7 100644
+--- a/chrome/browser/ui/views/permissions/permission_prompt_bubble_base_view.cc
++++ b/chrome/browser/ui/views/permissions/permission_prompt_bubble_base_view.cc
+@@ -197,6 +197,7 @@ PermissionPromptBubbleBaseView::PermissionPromptBubbleBaseView(
+   }
+ 
+   SetProperty(views::kElementIdentifierKey, kMainViewId);
++  BRAVE_PERMISSION_PROMPT_BUBBLE_BASE_VIEW
+ }
+ 
+ PermissionPromptBubbleBaseView::~PermissionPromptBubbleBaseView() = default;

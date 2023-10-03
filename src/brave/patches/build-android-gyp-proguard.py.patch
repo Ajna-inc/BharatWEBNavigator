@@ -1,0 +1,12 @@
+diff --git a/build/android/gyp/proguard.py b/build/android/gyp/proguard.py
+index 89a1b2dd3dfc6a58c1c350587d76395028b21b32..601ee249ae18d2e38b5427aa895f1a89517ed1ba 100755
+--- a/build/android/gyp/proguard.py
++++ b/build/android/gyp/proguard.py
+@@ -329,6 +329,7 @@ def _OptimizeWithR8(options, config_paths, libraries, dynamic_config_data):
+         '--pg-map-output',
+         tmp_mapping_path,
+     ]
++    cmd.remove('--map-id-template'); cmd.remove(f'{options.source_file} ({options.package_name})') # required to omit package check for mapping file
+ 
+     if options.disable_checks:
+       cmd += ['--map-diagnostics:CheckDiscardDiagnostic', 'error', 'none']

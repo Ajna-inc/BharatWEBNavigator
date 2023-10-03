@@ -1,0 +1,5 @@
+@@PACKAGEANDCHANNEL@@ (@@VERSIONFULL@@) @@CHANNEL@@; urgency=low
+
+  * Build spec: https://github.com/brave/brave-browser/releases/tag/v@@VERSION@@
+
+ -- @@MAINTNAME@@ <@@MAINTMAIL@@>  @@DATE_RFC5322@@

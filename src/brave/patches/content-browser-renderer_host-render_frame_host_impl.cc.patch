@@ -1,0 +1,13 @@
+diff --git a/content/browser/renderer_host/render_frame_host_impl.cc b/content/browser/renderer_host/render_frame_host_impl.cc
+index ad0d9cd11022f4f35e717efc088593df41d46496..03f3557f459b75da5d07e992290587448b71ff42 100644
+--- a/content/browser/renderer_host/render_frame_host_impl.cc
++++ b/content/browser/renderer_host/render_frame_host_impl.cc
+@@ -8255,6 +8255,8 @@ void RenderFrameHostImpl::CreateNewWindow(
+         dom_storage_context, params->session_storage_namespace_id);
+   }
+ 
++  params->no_javascript_access = no_javascript_access;
++
+   if (IsCredentialless() || IsNestedWithinFencedFrame() ||
+       CoopSuppressOpener(/*opener=*/this)) {
+     params->opener_suppressed = true;

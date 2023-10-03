@@ -1,0 +1,20 @@
+diff --git a/third_party/blink/renderer/modules/plugins/dom_plugin_array.cc b/third_party/blink/renderer/modules/plugins/dom_plugin_array.cc
+index 392fcaa8611465cf25fe73076c9720050b62a672..419c27b29d7e41cc3a4388c0998a8c32e3541396 100644
+--- a/third_party/blink/renderer/modules/plugins/dom_plugin_array.cc
++++ b/third_party/blink/renderer/modules/plugins/dom_plugin_array.cc
+@@ -194,6 +194,7 @@ void DOMPluginArray::UpdatePluginData() {
+     }
+     return;
+   }
++  BRAVE_DOM_PLUGINS_UPDATE_PLUGIN_DATA__RESET_PLUGIN_DATA
+   PluginData* data = GetPluginData();
+   if (!data) {
+     dom_plugins_.clear();
+@@ -215,6 +216,7 @@ void DOMPluginArray::UpdatePluginData() {
+       }
+     }
+   }
++  BRAVE_DOM_PLUGINS_UPDATE_PLUGIN_DATA__FARBLE_PLUGIN_DATA
+ }
+ 
+ void DOMPluginArray::ContextDestroyed() {

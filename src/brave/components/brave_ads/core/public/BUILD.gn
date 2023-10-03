@@ -1,0 +1,65 @@
+# Copyright (c) 2023 The Brave Authors. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at https://mozilla.org/MPL/2.0/.
+
+source_set("headers") {
+  sources = [
+    "account/confirmations/confirmation_type.h",
+    "ads.h",
+    "ads_callback.h",
+    "ads_constants.h",
+    "ads_feature.h",
+    "ads_util.h",
+    "client/ads_client.h",
+    "client/ads_client_callback.h",
+    "client/ads_client_notifier.h",
+    "client/ads_client_notifier_observer.h",
+    "database/database.h",
+    "export.h",
+    "flags/flags_util.h",
+    "history/ad_content_info.h",
+    "history/ad_content_value_util.h",
+    "history/category_content_info.h",
+    "history/category_content_value_util.h",
+    "history/history_filter_types.h",
+    "history/history_item_info.h",
+    "history/history_item_value_util.h",
+    "history/history_sort_types.h",
+    "prefs/pref_names.h",
+    "targeting/geographical/subdivision/supported_subdivisions.h",
+    "transfer/transfer_feature.h",
+    "units/ad_info.h",
+    "units/ad_type.h",
+    "units/inline_content_ad/inline_content_ad_constants.h",
+    "units/inline_content_ad/inline_content_ad_info.h",
+    "units/inline_content_ad/inline_content_ad_value_util.h",
+    "units/new_tab_page_ad/new_tab_page_ad_constants.h",
+    "units/new_tab_page_ad/new_tab_page_ad_info.h",
+    "units/new_tab_page_ad/new_tab_page_ad_value_util.h",
+    "units/new_tab_page_ad/new_tab_page_ad_wallpaper_focal_point_info.h",
+    "units/new_tab_page_ad/new_tab_page_ad_wallpaper_info.h",
+    "units/notification_ad/notification_ad_constants.h",
+    "units/notification_ad/notification_ad_feature.h",
+    "units/notification_ad/notification_ad_info.h",
+    "units/notification_ad/notification_ad_value_util.h",
+    "units/promoted_content_ad/promoted_content_ad_constants.h",
+    "units/promoted_content_ad/promoted_content_ad_info.h",
+    "units/promoted_content_ad/promoted_content_ad_value_util.h",
+    "units/search_result_ad/search_result_ad_feature.h",
+    "user/user_attention/user_activity/page_transition_types.h",
+    "user/user_attention/user_idle_detection/user_idle_detection_feature.h",
+    "user/user_interaction/ad_events/ad_event_cache.h",
+  ]
+
+  deps = [
+    "//base",
+    "//sql",
+    "//url",
+  ]
+
+  public_deps = [
+    "//brave/components/brave_ads/core/mojom",
+    "//brave/components/brave_federated/public/interfaces",
+  ]
+}

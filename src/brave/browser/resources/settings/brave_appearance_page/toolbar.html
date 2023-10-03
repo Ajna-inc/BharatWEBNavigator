@@ -1,0 +1,68 @@
+<style include="settings-shared iron-flex">
+</style>
+<settings-toggle-button
+  class="cr-row"
+  pref="{{prefs.brave.show_bookmarks_button}}"
+  label="$i18n{appearanceSettingsShowBookmarksButton}">
+</settings-toggle-button>
+<settings-toggle-button
+  class="cr-row"
+  pref="{{prefs.brave.today.should_show_toolbar_button}}"
+  label="$i18n{appearanceSettingsShowBraveNewsButtonLabel}">
+</settings-toggle-button>
+<settings-toggle-button
+  class="cr-row"
+  pref="{{prefs.brave.location_bar_is_wide}}"
+  label="$i18n{appearanceSettingsLocationBarIsWide}">
+</settings-toggle-button>
+<settings-toggle-button
+  pref="{{prefs.omnibox.prevent_url_elisions}}"
+  class="cr-row"
+  label="$i18n{showFullUrls}">
+</settings-toggle-button>
+<settings-toggle-button
+  class="cr-row"
+  pref="{{prefs.brave.autocomplete_enabled}}"
+  label="$i18n{appearanceSettingsShowAutocompleteInAddressBar}">
+</settings-toggle-button>
+<template
+  is="dom-if"
+  if="[[prefs.brave.autocomplete_enabled.value]]">
+  <div class="list-frame vertical-list">
+    <settings-checkbox
+      class="cr-row list-item"
+      pref="{{prefs.brave.top_site_suggestions_enabled}}"
+      label="$i18n{appearanceSettingsUseTopSiteSuggestions}">
+    </settings-checkbox>
+    <settings-checkbox
+      class="cr-row list-item"
+      pref="{{prefs.brave.omnibox.history_suggestions_enabled}}"
+      label="$i18n{appearanceSettingsUseHistorySuggestions}">
+    </settings-checkbox>
+    <settings-checkbox
+      class="cr-row list-item"
+      pref="{{prefs.brave.omnibox.bookmark_suggestions_enabled}}"
+      label="$i18n{appearanceSettingsUseBookmarkSuggestions}">
+    </settings-checkbox>
+    <template is="dom-if" if="[[showLeoAssistant_()]]">
+      <settings-checkbox class="cr-row list-item"
+        pref="{{prefs.brave.ai_chat.autocomplete_provider_enabled}}"
+        label="$i18n{appearanceSettingsUseLeoSuggestions}">
+      </settings-checkbox>
+    </template>
+  </div>
+</template>
+<if expr="toolkit_views">
+  <settings-brave-appearance-tabs prefs="{{prefs}}""></settings-brave-appearance-tabs>
+  <settings-brave-appearance-sidebar prefs="{{prefs}}"></settings-brave-appearance-sidebar>
+</if>
+<if expr="enable_brave_vpn_wireguard">
+  <template is="dom-if" if="[[showBraveVPNOption_()]]">
+    <settings-toggle-button
+      pref="{{prefs.brave.brave_vpn.show_button}}"
+      class="cr-row"
+      label="$i18n{showBraveVPNButton}"
+      sub-label="$i18n{showBraveVPNButtonSubLabel}">
+    </settings-toggle-button>
+  </template>
+</if>

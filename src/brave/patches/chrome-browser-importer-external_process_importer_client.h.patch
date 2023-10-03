@@ -1,0 +1,12 @@
+diff --git a/chrome/browser/importer/external_process_importer_client.h b/chrome/browser/importer/external_process_importer_client.h
+index dab4b99239c54925a46c701a298fa16fa81a3799..5b186dc2c30c04e3749cfa6ed32fa798129bc454 100644
+--- a/chrome/browser/importer/external_process_importer_client.h
++++ b/chrome/browser/importer/external_process_importer_client.h
+@@ -84,6 +84,7 @@ class ExternalProcessImporterClient
+       const std::vector<ImporterAutofillFormDataEntry>&
+           autofill_form_data_entry_group) override;
+ 
++  BRAVE_EXTERNAL_PROCESS_IMPORTER_CLIENT_H
+  protected:
+   ~ExternalProcessImporterClient() override;
+ 

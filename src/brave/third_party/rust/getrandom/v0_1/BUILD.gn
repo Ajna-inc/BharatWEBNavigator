@@ -1,0 +1,66 @@
+# Copyright 2023 The Chromium Authors
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//build/rust/cargo_crate.gni")
+
+cargo_crate("lib") {
+  crate_name = "getrandom"
+  epoch = "0.1"
+  crate_type = "rlib"
+
+  # Only for usage from third-party crates. Add the crate to
+  # third_party.toml to use it from first-party code.
+  visibility = [ "//brave/third_party/rust/*" ]
+  crate_root = "crate/src/lib.rs"
+  sources = [
+    "//brave/third_party/rust/getrandom/v0_1/crate/benches/mod.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/build.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/bsd_arandom.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/cloudabi.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/dummy.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/error.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/error_impls.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/fuchsia.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/ios.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/lib.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/linux_android.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/macos.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/openbsd.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/rdrand.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/solaris_illumos.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/use_file.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/util.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/util_libc.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/vxworks.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/wasi.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/wasm32_bindgen.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/wasm32_stdweb.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/windows.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/src/windows_uwp.rs",
+    "//brave/third_party/rust/getrandom/v0_1/crate/tests/common.rs",
+  ]
+  inputs = [
+    "//brave/third_party/rust/getrandom/v0_1/crate/CHANGELOG.md",
+    "//brave/third_party/rust/getrandom/v0_1/crate/README.md",
+  ]
+
+  # Unit tests skipped. Generate with --with-tests to include them.
+  build_native_rust_unit_tests = false
+  edition = "2018"
+  cargo_pkg_version = "0.1.16"
+  cargo_pkg_authors = "The Rand Project Developers"
+  cargo_pkg_name = "getrandom"
+  cargo_pkg_description = "A small cross-platform library for retrieving random data from system source"
+  library_configs -= [ "//build/config/compiler:chromium_code" ]
+  library_configs += [ "//build/config/compiler:no_chromium_code" ]
+  executable_configs -= [ "//build/config/compiler:chromium_code" ]
+  executable_configs += [ "//build/config/compiler:no_chromium_code" ]
+  deps = [ "//third_party/rust/cfg_if/v1:lib" ]
+  if (!is_win) {
+    deps += [ "//third_party/rust/libc/v0_2:lib" ]
+  }
+  features = [ "std" ]
+  build_root = "crate/build.rs"
+  build_sources = [ "crate/build.rs" ]
+}

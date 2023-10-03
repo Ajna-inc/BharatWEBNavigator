@@ -1,0 +1,20 @@
+diff --git a/third_party/blink/renderer/modules/BUILD.gn b/third_party/blink/renderer/modules/BUILD.gn
+index 55b20f0065a8ba84f40305592567397be4491fd5..d71052bf686536be516a570ef5a1cf7b4e936d65 100644
+--- a/third_party/blink/renderer/modules/BUILD.gn
++++ b/third_party/blink/renderer/modules/BUILD.gn
+@@ -19,6 +19,7 @@ if (is_ios) {
+ }
+ 
+ visibility = [ "//third_party/blink/renderer/*" ]
++visibility += brave_blink_renderer_modules_visibility
+ 
+ config("modules_implementation") {
+   defines = [ "BLINK_MODULES_IMPLEMENTATION=1" ]
+@@ -174,6 +175,7 @@ component("modules") {
+   # generating the snapshot for android, blink is compiled with
+   # current_os="linux" and target_os="android". Using target_os is necessary as
+   # we need to compile in the same way as would happen when current_os="android".
++  sub_modules += brave_blink_sub_modules
+   if (target_os == "android") {
+     sub_modules += [ "//third_party/blink/renderer/modules/remote_objects" ]
+   } else {

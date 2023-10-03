@@ -1,0 +1,12 @@
+diff --git a/chrome/browser/ui/webui/downloads/downloads_ui.cc b/chrome/browser/ui/webui/downloads/downloads_ui.cc
+index e56ad5469d6cded25cf3b37466973d6162cb4a50..8a49018ce3218ca3aba1a4abb5595fc9874c6512 100644
+--- a/chrome/browser/ui/webui/downloads/downloads_ui.cc
++++ b/chrome/browser/ui/webui/downloads/downloads_ui.cc
+@@ -60,6 +60,7 @@ namespace {
+ content::WebUIDataSource* CreateAndAddDownloadsUIHTMLSource(Profile* profile) {
+   content::WebUIDataSource* source = content::WebUIDataSource::CreateAndAdd(
+       profile, chrome::kChromeUIDownloadsHost);
++  BRAVE_CREATE_DOWNLOADS_UI_HTML_SOURCE
+   webui::SetupWebUIDataSource(
+       source, base::make_span(kDownloadsResources, kDownloadsResourcesSize),
+       IDR_DOWNLOADS_DOWNLOADS_HTML);

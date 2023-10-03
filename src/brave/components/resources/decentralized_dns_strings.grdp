@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grit-part>
+  <message name="IDS_UNSTOPPABLE_DOMAINS_OPT_IN_TITLE" desc="Title of interstitial opt-in page for unstoppable domains.">
+    Unstoppable Domains
+  </message>
+  <message name="IDS_UNSTOPPABLE_DOMAINS_OPT_IN_HEADING" desc="Heading of unstoppable domains opt-in interstitial opt-in page.">
+    Enable support of Unstoppable Domains in Brave?
+  </message>
+  <message name="IDS_UNSTOPPABLE_DOMAINS_OPT_IN_PRIMARY_PARAGRAPH" desc="Main paragraph of unstoppable domains opt-in interstitial page.">
+    Brave will be using Infura to resolve .crypto (and also .x, .nft, .dao, .wallet, .blockchain, .bitcoin, .zil) domain names that are on Unstoppable Domains. Brave hides your IP address. If you enable this, Infura will see that someone is trying to visit these domains but nothing else. See Infura's <ph name="BEGIN_INFURA_TOU_LINK">&lt;a target="_blank" href="$1"&gt;</ph>terms of use<ph name="END_INFURA_TOU_LINK">&lt;/a&gt;</ph> and <ph name="BEGIN_INFURA_PRIVACY_LINK">&lt;a target="_blank" href="$2"&gt;</ph>privacy policy<ph name="END_INFURA_PRIVACY_LINK">&lt;/a&gt;</ph>.
+  </message>
+  <message name="IDS_ENS_OPT_IN_TITLE" desc="Title of interstitial opt-in page for ENS.">
+    Ethereum Name Service
+  </message>
+  <message name="IDS_ENS_OPT_IN_HEADING" desc="Heading of ENS opt-in interstitial opt-in page.">
+    Enable support of Ethereum Name Service (ENS) in Brave?
+  </message>
+  <message name="IDS_ENS_OPT_IN_PRIMARY_PARAGRAPH" desc="Main paragraph of ENS opt-in interstitial page.">
+    Brave will be using Infura to resolve .eth domain names that are on Ethereum Name Service (ENS). Brave hides your IP address. If you enable this, Infura will see that someone is trying to visit these .eth domains but nothing else. See Infura's <ph name="BEGIN_INFURA_TOU_LINK">&lt;a target="_blank" href="$1"&gt;</ph>terms of use<ph name="END_INFURA_TOU_LINK">&lt;/a&gt;</ph> and <ph name="BEGIN_INFURA_PRIVACY_LINK">&lt;a target="_blank" href="$2"&gt;</ph>privacy policy<ph name="END_INFURA_PRIVACY_LINK">&lt;/a&gt;</ph>.
+  </message>
+    <message name="IDS_ENS_OFFCHAIN_LOOKUP_OPT_IN_TITLE" desc="Title of interstitial opt-in page for ENS offchain lookup.">
+    Ethereum Name Service Offchain Lookup
+  </message>
+  <message name="IDS_ENS_OFFCHAIN_LOOKUP_OPT_IN_HEADING" desc="Heading of ENS offchain lookup opt-in interstitial opt-in page.">
+    Enable support of Ethereum Name Service (ENS) offchain lookup in Brave?
+  </message>
+  <message name="IDS_ENS_OFFCHAIN_LOOKUP_OPT_IN_PRIMARY_PARAGRAPH" desc="Main paragraph of ENS offchain lookup opt-in interstitial page.">
+    This .eth domain name is stored offchain and will be resolved by a third party gateway. If you enable ENS offchain lookup, the third party gateway will see that you're trying to visit the .eth domain. <ph name="BEGIN_BRAVE_LEARN_MORE_LINK">&lt;a target="_blank" href="$1"&gt;</ph>Learn more<ph name="END_BRAVE_LEARN_MORE_LINK">&lt;/a&gt;</ph>.
+  </message>
+    <message name="IDS_ENS_OFFCHAIN_LOOKUP_OPT_IN_PROCEED" desc="The text for the ENS offchain lookup opt-in interstitial proceed button.">
+    Proceed with offchain lookup
+  </message>
+  <message name="IDS_ENS_OFFCHAIN_LOOKUP_OPT_IN_DONT_PROCEED" desc="The text for the ENS offchain lookup opt-in interstitial don't proceed button(disable).">
+    Disable
+  </message>
+  <message name="IDS_SNS_OPT_IN_TITLE" desc="Title of interstitial opt-in page for SNS.">
+    Solana Name Service
+  </message>
+  <message name="IDS_SNS_OPT_IN_HEADING" desc="Heading of SNS opt-in interstitial opt-in page.">
+    Enable support of Solana Name Service (SNS) in Brave?
+  </message>
+  <message name="IDS_SNS_OPT_IN_PRIMARY_PARAGRAPH" desc="Main paragraph of SNS opt-in interstitial page.">
+    Brave will be using Syndica to resolve .sol domain names. Brave hides your IP address. If you enable this, Syndica will see that someone is trying to visit these .sol domains but nothing else. See Syndica's <ph name="BEGIN_SYNDICA_TOU_LINK">&lt;a target="_blank" href="$1"&gt;</ph>terms of use<ph name="END_SYNDICA_TOU_LINK">&lt;/a&gt;</ph> and <ph name="BEGIN_SYNDICA_PRIVACY_LINK">&lt;a target="_blank" href="$2"&gt;</ph>privacy policy<ph name="END_SYNDICA_PRIVACY_LINK">&lt;/a&gt;</ph>.
+  </message>
+  <message name="IDS_DECENTRALIZED_DNS_OPT_IN_PRIMARY_BUTTON" desc="The text for the decentralized DNS opt-in interstitial primary button.">
+    Proceed using Infura server
+  </message>
+  <message name="IDS_DECENTRALIZED_DNS_OPT_IN_PRIMARY_INFURA_BUTTON" desc="The text for the decentralized DNS opt-in interstitial primary button for Infura.">
+    Proceed using Infura server
+  </message>
+  <message name="IDS_DECENTRALIZED_DNS_OPT_IN_PRIMARY_SYNDICA_BUTTON" desc="The text for the decentralized DNS opt-in interstitial primary button for Syndica.">
+    Proceed using Syndica server
+  </message>
+  <message name="IDS_DECENTRALIZED_DNS_OPT_IN_DONT_PROCEED_BUTTON" desc="The text for the don't proceed button in decentralized DNS opt-in interstitial page.">
+    Disable
+  </message>
+  <message name="IDS_DECENTRALIZED_DNS_RESOLVE_OPTION_ASK" desc="Select control value for which decentralized DNS resolve method to use">
+    Ask
+  </message>
+  <message name="IDS_DECENTRALIZED_DNS_RESOLVE_OPTION_DISABLED" desc="Select control value for which decentralized DNS resolve method to use">
+    Disabled
+  </message>
+  <message name="IDS_DECENTRALIZED_DNS_RESOLVE_OPTION_ENABLED" desc="Select control value for which decentralized DNS resolve method to use">
+    Enabled
+  </message>
+  <message name="IDS_DECENTRALIZED_DNS_ENS_OFFCHAIN_RESOLVE_OPTION_ASK" desc="ENS offchain resolve method 'Ask'">
+    Ask
+  </message>
+  <message name="IDS_DECENTRALIZED_DNS_ENS_OFFCHAIN_RESOLVE_OPTION_DISABLED" desc="ENS offchain resolve method 'Disabled'">
+    Disabled
+  </message>
+  <message name="IDS_DECENTRALIZED_DNS_ENS_OFFCHAIN_RESOLVE_OPTION_ENABLED" desc="ENS offchain resolve method 'Enabled'">
+    Enabled
+  </message>
+</grit-part>

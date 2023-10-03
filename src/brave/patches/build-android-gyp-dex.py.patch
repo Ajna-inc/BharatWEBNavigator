@@ -1,0 +1,12 @@
+diff --git a/build/android/gyp/dex.py b/build/android/gyp/dex.py
+index 221b3fd50c7d02e56f337cacb7174e004ce15d7f..50db6b75db8c8bcfae75137fce46b72c1797f4bc 100755
+--- a/build/android/gyp/dex.py
++++ b/build/android/gyp/dex.py
+@@ -30,6 +30,7 @@ DEFAULT_IGNORE_WARNINGS = (
+     # META-INF/. This means that all rules with a '-upto-' qualifier will be
+     # excluded and all rules with a -from- qualifier will be included.
+     r'Running R8 version main', )
++DEFAULT_IGNORE_WARNINGS += ( r'.Brave', )
+ 
+ INTERFACE_DESUGARING_WARNINGS = (r'default or static interface methods', )
+ 

@@ -1,0 +1,10 @@
+diff --git a/chrome/browser/ui/webui/BUILD.gn b/chrome/browser/ui/webui/BUILD.gn
+index c450791517869cd1475cb3732195f72698b4eb99..8ca92d5777988202468d3e68975eed305883724e 100644
+--- a/chrome/browser/ui/webui/BUILD.gn
++++ b/chrome/browser/ui/webui/BUILD.gn
+@@ -75,4 +75,5 @@ source_set("configs") {
+       deps += [ "//ash/webui/sample_system_web_app_ui" ]
+     }
+   }
++  import("//brave/browser/ui/webui/sources.gni") deps += brave_browser_ui_webui_configs_deps
+ }

@@ -1,0 +1,12 @@
+diff --git a/components/permissions/permission_uma_util.cc b/components/permissions/permission_uma_util.cc
+index e44d704250bcf731528b1e8f9258cd5528c0c6bc..9800713e04832bb7dcdca91ab8de16f9b015ac0d 100644
+--- a/components/permissions/permission_uma_util.cc
++++ b/components/permissions/permission_uma_util.cc
+@@ -122,6 +122,7 @@ RequestTypeForUma GetUmaValueForRequestType(RequestType request_type) {
+ #endif
+     case RequestType::kTopLevelStorageAccess:
+       return RequestTypeForUma::PERMISSION_TOP_LEVEL_STORAGE_ACCESS;
++    BRAVE_GET_UMA_VALUE_FOR_REQUEST_TYPE
+   }
+ }
+ 

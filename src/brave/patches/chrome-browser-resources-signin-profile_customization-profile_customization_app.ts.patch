@@ -1,0 +1,12 @@
+diff --git a/chrome/browser/resources/signin/profile_customization/profile_customization_app.ts b/chrome/browser/resources/signin/profile_customization/profile_customization_app.ts
+index 3546cf3acdb7847c053b01005a1b3f154c441ef4..59983a4b271ff8e6513eb66c070a34f74f825702 100644
+--- a/chrome/browser/resources/signin/profile_customization/profile_customization_app.ts
++++ b/chrome/browser/resources/signin/profile_customization/profile_customization_app.ts
+@@ -2,6 +2,7 @@
+ // Use of this source code is governed by a BSD-style license that can be
+ // found in the LICENSE file.
+ 
++import 'chrome://resources/brave/polymer_overriding.js';
+ import 'chrome://resources/cr_components/customize_themes/customize_themes.js';
+ import 'chrome://resources/cr_components/theme_color_picker/theme_color_picker.js';
+ import 'chrome://resources/cr_elements/cr_button/cr_button.js';

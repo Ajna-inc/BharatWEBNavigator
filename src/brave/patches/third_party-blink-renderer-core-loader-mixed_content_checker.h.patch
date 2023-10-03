@@ -1,0 +1,12 @@
+diff --git a/third_party/blink/renderer/core/loader/mixed_content_checker.h b/third_party/blink/renderer/core/loader/mixed_content_checker.h
+index 21731cfb406e9c46d9fdaf0b840a74b2facbd894..8a379ff962193d83daa7e3893f31c1d7bacc22f5 100644
+--- a/third_party/blink/renderer/core/loader/mixed_content_checker.h
++++ b/third_party/blink/renderer/core/loader/mixed_content_checker.h
+@@ -98,7 +98,6 @@ class CORE_EXPORT MixedContentChecker final {
+   static bool IsWebSocketAllowed(WorkerFetchContext&, const KURL&);
+ 
+   static bool IsMixedContent(const SecurityOrigin*, const KURL&);
+-  static bool IsMixedContent(const String& origin_protocol, const KURL&);
+   static bool IsMixedContent(const FetchClientSettingsObject&, const KURL&);
+   static bool IsMixedFormAction(
+       LocalFrame*,

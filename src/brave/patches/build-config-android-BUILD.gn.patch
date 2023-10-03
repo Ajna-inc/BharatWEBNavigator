@@ -1,0 +1,12 @@
+diff --git a/build/config/android/BUILD.gn b/build/config/android/BUILD.gn
+index e7c18c068d4e5d401e4128d7f2384bb06e506a30..5f26aed99647932158b4a25a46ae5b03fbccb633 100644
+--- a/build/config/android/BUILD.gn
++++ b/build/config/android/BUILD.gn
+@@ -39,6 +39,7 @@ config("compiler") {
+     # http://crbug.com/448386
+     "-Wl,--exclude-libs=libvpx_assembly_arm.a",
+   ]
++  ldflags += ["-Wl,--allow-multiple-definition"] # Resolve conflict between libgcc++ and rustup symbols (e.g. __divdi3)
+ 
+   if (current_cpu == "arm64") {
+     # Reduce the page size from 65536 in order to reduce binary size slightly

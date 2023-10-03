@@ -1,0 +1,12 @@
+diff --git a/chrome/browser/ui/views/location_bar/location_bar_view.cc b/chrome/browser/ui/views/location_bar/location_bar_view.cc
+index fb55e66b48bb018ea281333c2541fbf212c527f9..89f95ffba36bd6158c3c91e8c6b1a02249080031 100644
+--- a/chrome/browser/ui/views/location_bar/location_bar_view.cc
++++ b/chrome/browser/ui/views/location_bar/location_bar_view.cc
+@@ -752,6 +752,7 @@ void LocationBarView::Layout() {
+     }
+   };
+ 
++  BRAVE_LAYOUT_TRAILING_DECORATIONS
+   add_trailing_decoration(page_action_icon_container_,
+                           /*intra_item_padding=*/0);
+   for (ContentSettingImageView* view : base::Reversed(content_setting_views_)) {

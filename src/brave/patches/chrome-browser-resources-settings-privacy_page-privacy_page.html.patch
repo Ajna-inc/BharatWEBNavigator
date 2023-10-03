@@ -1,0 +1,28 @@
+diff --git a/chrome/browser/resources/settings/privacy_page/privacy_page.html b/chrome/browser/resources/settings/privacy_page/privacy_page.html
+index 9072306bbf4fdba5a0a0aa37b4ccebee0c1ff33e..f028873838d4ba5010c35306b49bd4af11fed902 100644
+--- a/chrome/browser/resources/settings/privacy_page/privacy_page.html
++++ b/chrome/browser/resources/settings/privacy_page/privacy_page.html
+@@ -34,6 +34,7 @@
+     <settings-animated-pages id="pages" section="privacy"
+         focus-config="[[focusConfig_]]">
+       <div route-path="default">
++        <settings-personalization-options prefs="{{prefs}}"></settings-personalization-options>
+         <cr-link-row id="clearBrowsingData"
+             start-icon="cr:delete"
+             label="$i18n{clearBrowsingData}"
+@@ -244,6 +245,7 @@
+           </category-setting-exceptions>
+         </settings-subpage>
+       </template>
++<if expr="_google_chrome">
+       <template is="dom-if" route-path="/content/backgroundSync" no-search>
+         <settings-subpage page-title="$i18n{siteSettingsBackgroundSync}"
+             search-label="$i18n{siteSettingsAllSitesSearch}"
+@@ -271,6 +273,7 @@
+           </category-setting-exceptions>
+         </settings-subpage>
+       </template>
++</if>
+       <template is="dom-if" route-path="/content/camera" no-search>
+         <settings-subpage page-title="$i18n{siteSettingsCategoryCamera}"
+             search-label="$i18n{siteSettingsAllSitesSearch}"

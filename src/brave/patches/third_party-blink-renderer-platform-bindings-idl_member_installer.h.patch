@@ -1,0 +1,12 @@
+diff --git a/third_party/blink/renderer/platform/bindings/idl_member_installer.h b/third_party/blink/renderer/platform/bindings/idl_member_installer.h
+index 61c84d912a7c0b4c289ec76bed1bb5611f5434af..a986a22e8fac2f6055faf24a67422c88a3942a27 100644
+--- a/third_party/blink/renderer/platform/bindings/idl_member_installer.h
++++ b/third_party/blink/renderer/platform/bindings/idl_member_installer.h
+@@ -188,6 +188,7 @@ class PLATFORM_EXPORT IDLMemberInstaller final {
+       v8::Local<v8::Object> interface_object,
+       v8::Local<v8::Signature> signature,
+       base::span<const ExposedConstructConfig> configs);
++  BRAVE_IDL_MEMBER_INSTALLER_H_
+ };
+ 
+ }  // namespace bindings

@@ -1,0 +1,13 @@
+diff --git a/components/content_settings/core/common/cookie_settings_base.h b/components/content_settings/core/common/cookie_settings_base.h
+index 97daab243b2ccb33263ceb8151d963fad92905bd..91e974a297228f49313d3a23afa6c86a4fef8f13 100644
+--- a/components/content_settings/core/common/cookie_settings_base.h
++++ b/components/content_settings/core/common/cookie_settings_base.h
+@@ -72,7 +72,7 @@ class CookieSettingsBase {
+   CookieSettingsBase(const CookieSettingsBase&) = delete;
+   CookieSettingsBase& operator=(const CookieSettingsBase&) = delete;
+ 
+-  virtual ~CookieSettingsBase() = default;
++  virtual ~CookieSettingsBase();
+ 
+   // An enum that represents the scope of cookies to which the user's
+   // third-party-cookie-blocking setting applies, in a given context.

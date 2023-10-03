@@ -1,0 +1,12 @@
+diff --git a/content/renderer/render_thread_impl.cc b/content/renderer/render_thread_impl.cc
+index 328ed025f6b71c34f2855a5a2983dee7e7081c11..fe6c1d2f3266faf7f5239bbfb59e3cdb187593ca 100644
+--- a/content/renderer/render_thread_impl.cc
++++ b/content/renderer/render_thread_impl.cc
+@@ -941,6 +941,7 @@ void RenderThreadImpl::InitializeRenderer(
+ }
+ 
+ void RenderThreadImpl::RegisterSchemes() {
++  REGISTER_BRAVE_SCHEMES_DISPLAY_ISOLATED_AND_NO_JS
+   // chrome:
+   WebString chrome_scheme(WebString::FromASCII(kChromeUIScheme));
+   WebSecurityPolicy::RegisterURLSchemeAsDisplayIsolated(chrome_scheme);

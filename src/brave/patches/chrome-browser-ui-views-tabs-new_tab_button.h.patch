@@ -1,0 +1,12 @@
+diff --git a/chrome/browser/ui/views/tabs/new_tab_button.h b/chrome/browser/ui/views/tabs/new_tab_button.h
+index 2ab48dd2b259b31c6e517854a90a2f883e83965e..45f048d62a0e4aa0ff3ff70e10b0db7857a9d8e5 100644
+--- a/chrome/browser/ui/views/tabs/new_tab_button.h
++++ b/chrome/browser/ui/views/tabs/new_tab_button.h
+@@ -50,6 +50,7 @@ class NewTabButton : public views::ImageButton,
+   void AddLayerToRegion(ui::Layer* new_layer,
+                         views::LayerRegion region) override;
+   void RemoveLayerFromRegions(ui::Layer* old_layer) override;
++  BRAVE_NEW_TAB_BUTTON_H_
+ 
+  protected:
+   virtual void PaintIcon(gfx::Canvas* canvas);
